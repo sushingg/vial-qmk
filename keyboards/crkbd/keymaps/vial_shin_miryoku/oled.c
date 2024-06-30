@@ -35,12 +35,12 @@ void render_lock_status(led_t led_state) {
 }
 
 void render_layer_status(void) {
-    switch (get_highest_layer(layer_state)) {
+    switch (get_highest_layer(layer_state | default_layer_state)) {
         case _CMK:
-            oled_write("CMK  ", false);
+            oled_write(" CMK ", false);
             break;
         case _NAV:
-            oled_write("NAV  ", false);
+            oled_write(" NAV ", false);
             break;
         case _MOU:
             oled_write("MOUSE", false);
@@ -49,16 +49,19 @@ void render_layer_status(void) {
             oled_write("MEDIA", false);
             break;
         case _NUM:
-            oled_write("NUM  ", false);
+            oled_write(" NUM ", false);
             break;
         case _SYM:
-            oled_write("SYM  ", false);
+            oled_write(" SYM ", false);
             break;
         case _FUN:
-            oled_write("FUN  ", false);
+            oled_write(" FUN ", false);
             break;
-        case _OTR:
+        case _GAM:
             oled_write("GAME ", false);
+            break;
+        case _GFN:
+            oled_write("G_FUN", false);
             break;
         default:
             oled_write("OTHER", false);

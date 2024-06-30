@@ -7,5 +7,6 @@
 #define _NUM 4
 #define _SYM 5
 #define _FUN 6
-#define _OTR 7
+#define _GAM 7
+#define _GFN 8
 #endif
