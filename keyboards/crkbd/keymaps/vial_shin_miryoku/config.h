@@ -27,8 +27,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // #define USE_MATRIX_I2C
 #ifdef KEYBOARD_crkbd_rev1_legacy
-#    undef USE_I2C
-#    define USE_SERIAL
+    #undef USE_I2C
+    #define USE_SERIAL
 #endif
 
 /* Select hand configuration */
@@ -39,20 +39,29 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define USE_SERIAL_PD2
 #ifdef RGBLIGHT_ENABLE
-#    undef RGBLIGHT_LED_COUNT
-#    define RGBLIGHT_ANIMATIONS
-#    define RGBLIGHT_LED_COUNT 54
-#    undef RGBLED_SPLIT
-#    define RGBLED_SPLIT \
-        { 27, 27 }
-#    define RGBLIGHT_LIMIT_VAL 120
-#    define RGBLIGHT_HUE_STEP  10
-#    define RGBLIGHT_SAT_STEP  17
-#    define RGBLIGHT_VAL_STEP  17
+    #undef RGBLIGHT_LED_COUNT
+    #define RGBLIGHT_ANIMATIONS
+    #define RGBLIGHT_LED_COUNT 54
+    #undef RGBLED_SPLIT
+    #define RGBLED_SPLIT \
+    { 27, 27 }
+    #define RGBLIGHT_LIMIT_VAL 120
+    #define RGBLIGHT_HUE_STEP  10
+    #define RGBLIGHT_SAT_STEP  17
+    #define RGBLIGHT_VAL_STEP  17
 #endif
 
-#define OLED_FONT_H "keyboards/crkbd/lib/glcdfont.c"
+#define OLED_FONT_H "keyboards/crkbd/keymaps/vial_shin_miryoku/glcdfont.c"
 
 /* shin */
 #define SPLIT_LAYER_STATE_ENABLE
-// #define PERMISSIVE_HOLD
+
+#define PERMISSIVE_HOLD
+
+#define FLOW_COUNT 30
+#define FLOW_LAYERS_COUNT 1
+ 
+#ifdef OLED_ENABLE
+    // 1 minutes of no activity to turn OLED off
+    #define OLED_TIMEOUT 60000  
+#endif

@@ -18,4 +18,5 @@ CONSOLE_ENABLE = no         # Console for debug
 COMMAND_ENABLE = no         # Commands for debug and configuration
 
 TRI_LAYER_ENABLE = yes
-SRC += features/achordion.c
+
+SRC += flow.c
