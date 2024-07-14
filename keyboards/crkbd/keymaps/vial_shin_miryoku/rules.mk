@@ -1,6 +1,6 @@
 VIA_ENABLE          = yes
 VIAL_ENABLE         = yes
-LTO_ENABLE          = no
+LTO_ENABLE          = yes
 
 RGBLIGHT_ENABLE     = no
 RGB_MATRIX_ENABLE   = no # Can't have RGBLIGHT and RGB_MATRIX at the same time.
@@ -18,5 +18,7 @@ CONSOLE_ENABLE = no         # Console for debug
 COMMAND_ENABLE = no         # Commands for debug and configuration
 
 TRI_LAYER_ENABLE = yes
+
+DEBOUNCE_TYPE = asym_eager_defer_pk
 
 SRC += flow.c

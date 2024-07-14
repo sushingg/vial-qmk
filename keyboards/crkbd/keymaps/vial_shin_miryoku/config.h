@@ -65,3 +65,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     // 1 minutes of no activity to turn OLED off
     #define OLED_TIMEOUT 120000  
 #endif
+
+#define DEBOUNCE 8

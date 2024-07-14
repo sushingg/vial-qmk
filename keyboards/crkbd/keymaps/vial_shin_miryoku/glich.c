@@ -4,7 +4,7 @@
 #define frame_size 512
 #define logo_glitch_count 5
 #define logo_glitch_dirty_count 2
-#define text_glitch_count 7
+#define text_glitch_count 6
 #define text_glitch_dirty_count 2
 
 static bool     glitch      = true;
